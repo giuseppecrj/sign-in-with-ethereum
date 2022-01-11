@@ -1,6 +1,6 @@
 import { ethers } from "ethers";
 
-export const authRequest = async (address:string, signer: ethers.Signer, setLoggedIn: any, chainId: string) => {
+export const authRequest = async (address:string, signer: ethers.Signer, setLoggedIn: any, chainId: number) => {
     const response = await fetch(`/api/auth?address=${address}`);
     const data = await response.json();
     console.log(data);
